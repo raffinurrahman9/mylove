@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'matemasie';
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #07252d;
+}
+h2{
+    position: relative;
+    font-size: 6em;
+    letter-spacing: 16px;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 1em;
+    outline: none;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate 
+{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4, 
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+    }
+}
+
+.social-container {
+    display:grid;
+    position: absolute;
+    gap: 20px;
+    top: 80%;
+}
+.social-container a{
+    background-color:  linear-gradient(transparent  #07252d);
+    padding: 0.5em;
+    border-radius: 50%;
+    height: 54px;
+    width: 54px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5x 10px #000;
+}
+.social-container a svg{
+    height: 38px;
+}
+.social-container a::before{
+    content: attr(data-social);
+    position: absolute;
+    background-color:var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.8em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px black;
+    transform: translateY(-30px) rotate(25deg);
+    opacity: 0;
+    transition: 200ms ease ;
+}
+.social-container a:hover{
+    background-color: var(--accent-color);
+    fill: white;
+}
+.social-container a::after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid var(--accent-color);
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 200ms ease ;
+}
+.social-container a:hover::before{
+    transform: translateY(-65px)rotate(0);
+    opacity: 1;
+}
+.social-container a:hover::after{
+    transform: translateY(-42px) rotate(0);
+    opacity: 1;
+}
+
+
+
+
