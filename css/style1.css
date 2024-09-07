@@ -15,7 +15,7 @@ h1
 margin: 0;
 padding: 0;
 color: #111;
-font-size: 10em;
+font-size: 9em;
 }
 h1 span
 {
@@ -74,6 +74,12 @@ h1 span:nth-child(16){
 }
 h1 span:nth-child(17){
     animation-delay:  4s;
+}
+h1 span:nth-child(18){
+    animation-delay:  4.25s;
+}
+h1 span:nth-child(19){
+    animation-delay:  4.5s;
 }
 
 @keyframes animate 
